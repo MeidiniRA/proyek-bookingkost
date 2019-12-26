@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/room', 'RoomController@index');
+Route::post('/room/create', 'RoomController@create');
