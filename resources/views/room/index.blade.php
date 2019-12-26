@@ -22,6 +22,7 @@
 			<th>Nama Kamar</th>
 			<th>Kategori</th>
 			<th>Kapasitas</th>
+			<th>Fasilitas</th>
 			<th>Harga</th>
 			<th>Status</th>
 		</tr>
@@ -30,6 +31,7 @@
 		<td>{{$room->nama}}</td>
 		<td>{{$room->kategori}}</td>
 		<td>{{$room->kapasitas}}</td>
+		<td>{{$room->fasilitas}}</td>
 		<td>Rp.{{$room->harga}}/bln</td>
 		<td>{{$room->status}}</td>
 		</tr>
@@ -53,7 +55,7 @@
         {{csrf_field()}}
   <div class="form-group">
     <label for="exampleInputEmail1">Nama Kamar</label>
-    <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Input nama depan">
+    <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Input nama kamar">
   </div>
 
   <div class="form-group">
@@ -67,6 +69,23 @@
     <label for="exampleInputEmail1">Kapasitas</label>
     <input name="kapasitas" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
   </div>
+  <div class="form-group row">
+    <label class="col-4 col-form-label">Fasilitas</label> 
+    <div class="col-8">
+      <div class="custom-controls-stacked">
+        <div class="custom-control custom-checkbox">
+          <input name="fasilitas" id="fasilitas_0" type="checkbox" class="custom-control-input" value="ac"> 
+          <label for="fasilitas_0" class="custom-control-label">AC</label>
+        </div>
+      </div>
+      <div class="custom-controls-stacked">
+        <div class="custom-control custom-checkbox">
+          <input name="fasilitas" id="fasilitas_1" type="checkbox" class="custom-control-input" value="kipas"> 
+          <label for="fasilitas_1" class="custom-control-label">Kipas Angin</label>
+        </div>
+      </div>
+    </div>
+  </div> 
   <div class="form-group">
     <label for="exampleInputEmail1">Harga Kamar</label>
     <input name="harga" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

@@ -18,6 +18,7 @@ class CreateRoomTable extends Migration
             $table->string('nama');
             $table->string('kategori');
             $table->string('kapasitas');
+            $table->string('fasilitas');
             $table->integer('harga');
             $table->string('status');
             $table->timestamps();
