@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/layouts/index');
 });
-Route::get('/room', 'RoomController@index');
+
+// Route::get('/room', 'RoomController@index');
 Route::post('/room/create', 'RoomController@create');
+Route::get('/room/{id}/edit', 'RoomController@edit');
+Route::post('/room/{id}/update', 'RoomController@update');
+Route::get('/room/{id}/delete', 'RoomController@delete');
+
+Route::resource('room', 'RoomController');
