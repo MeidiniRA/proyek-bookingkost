@@ -15,16 +15,16 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-tags"></i>Room </a>
-                        <a href="index.html"> <i class="menu-icon fa fa-users"></i>Customer</a>
-                        <a href="index.html"> <i class="menu-icon fa fa-bold"></i>Booking </a>
+                        <a href="{{url('/room')}}"> <i class="menu-icon fa fa-tags"></i>Room </a>
+                        <a href="{{url('/custome')}}"> <i class="menu-icon fa fa-users"></i>Customer</a>
+                        <a href="{{url('/booking')}}"> <i class="menu-icon fa fa-bold"></i>Booking </a>
                     </li>
                 </div>
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                 </ul>
                 <ul class="nav navbar-nav">
                      <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-user"></i>Data User </a>
+                        <a href="{{url('/admin')}}"> <i class="menu-icon fa fa-user"></i>Data Admin </a>
                     </li>
                 </ul>
                 </div>

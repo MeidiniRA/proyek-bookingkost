@@ -22,3 +22,6 @@ Route::post('/room/{id}/update', 'RoomController@update');
 Route::get('/room/{id}/delete', 'RoomController@delete');
 
 Route::resource('room', 'RoomController');
+Route::resource('booking', 'BookingController');
+
+
