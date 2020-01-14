@@ -11,9 +11,20 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Data Room</strong>
-                                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#exampleModal">
-                              Tambah Data
-                          </button>
+                                <button type="button" class="float-right" data-toggle="modal" data-target="#exampleModal">
+                                  <i class="fa fa-plus-circle fa-2x" style="color: black;">
+                                  </i>
+                                </button>
+                                <a href="/room/export">
+                                <button type="button" class="float-right">
+                                <i class="fa fa-file-excel-o fa-2x" style="color: black;"></i>
+                                </a>
+                                </button>
+                                <a href="/room/exportPdf">
+                                <button type="button" class="float-right">
+                                <i class="fa fa-file-pdf-o fa-2x" style="color: black;"></i>
+                                </a>
+                                </button>
                             </div>
                       </div>
                             <div class="card-body">
@@ -40,8 +51,8 @@
                                             <td>Rp.{{$room->harga}}/bln</td>
                                             <td>{{$room->status}}</td>
                                             <td>
-                                              <a href="/room/{{$room->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-                                              <a href="/room/{{$room->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Are You Sure for Delete?')">Dalete</a>
+                                              <a href="/room/{{$room->id}}/edit"><i class="fa fa-pencil"></i></a>
+                                              <a href="/room/{{$room->id}}/delete" onclick="return confirm('Are You Sure for Delete?')"><i class="fa fa-trash"></i></a>
                                           </td>
                                       </tr>
                                       @endforeach
@@ -87,13 +98,13 @@
     <div class="col-8">
       <div class="custom-controls-stacked">
         <div class="custom-control custom-checkbox">
-          <input name="fasilitas" id="fasilitas_0" type="checkbox" class="custom-control-input" value="ac"> 
+          <input name="fasilitas" id="fasilitas_0" type="checkbox" class="custom-control-input" value="AC"> 
           <label for="fasilitas_0" class="custom-control-label">AC</label>
         </div>
       </div>
       <div class="custom-controls-stacked">
         <div class="custom-control custom-checkbox">
-          <input name="fasilitas" id="fasilitas_1" type="checkbox" class="custom-control-input" value="kipas"> 
+          <input name="fasilitas" id="fasilitas_1" type="checkbox" class="custom-control-input" value="Kipas"> 
           <label for="fasilitas_1" class="custom-control-label">Kipas Angin</label>
         </div>
       </div>

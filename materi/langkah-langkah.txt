@@ -1,0 +1,95 @@
+-------------------------------------------------
+|---- Langkah - langkah membuat web laravel ----|
+-------------------------------------------------
+
+-------setting database-------
+buka folder .env ubah sesuai database yang dibutuhkan
+ex: 
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=dbpegawai
+DB_USERNAME=root
+DB_PASSWORD=
+
+-------mambuat fuction di appserviseprovider-------
+public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
+	
+-------untuk membuat migrasi baru atau table baru dalam database---- 
+C:\xampp\htdocs\pegawai>php artisan make:migration create_pegawai_table
+Created Migration: 2019_12_23_044433_create_pegawai_table
+
+C:\xampp\htdocs\booking_kost>php artisan migrate
+
+
+membuat route baru pada folder reotes file web.php 
+Route::get('/pegawai', 'PegawaiController@index' );
+
+
+-------untuk membuat controller----
+C:\xampp\htdocs\pegawai>php artisan make:controller PegawaiController
+Controller created successfully.
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class PegawaiController extends Controller
+{
+    public function index(){
+    	return view ('pegawai.index');
+    }
+}
+
+-------membuat  folder dan file baru untuk membuat tampilan baru------- 
+resources - views - folder baru(ex: pegawai) - file baru(ex: index.blade.php) (harus extensi blade.php)
+
+
+-------membuat model baru pada folder app -- providers -------
+C:\xampp\htdocs\pegawai>php artisan make:model Pegawai
+Model created successfully.
+
+
+-------membuat data baru untuk user-------
+C:\xampp\htdocs\pegawai>php artisan tinker
+Psy Shell v0.9.12 (PHP 7.3.11 — cli) by Justin Hileman
+>>> $user = new \App\User;
+=> App\User {#3033}
+>>> $user->name = "meidini"
+=> "meidini"
+>>> $user->email = "meidiniriskia@gmail.com"
+=> "meidiniriskia@gmail.com"
+>>> $user->password = bcrypt('123456')
+=> "$2y$10$nMPDrZJpE7.2TSv8L2XMauI9FP/VjgCIk3vLJ/9YINbGemv1pCmG2"
+>>> $user->save()
+=> true
+>>> 
+
+-------membuat export excel di dalam laravel-------
+C:\xampp\htdocs\pegawai>composer require maatwebsite/excel
+C:\xampp\htdocs\pegawai>php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider"
+C:\xampp\htdocs\pegawai>php artisan make:export UsersExport --model=User
+pindah syntax berikut ke controller yang akan menggunakan export excel
+
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
+
+public function export() 
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
+    }
+
+pindah syntax berikut ke routers-web.php yang akan menggunakan export excel di luar middleware
+Route::get('users/export/', 'UsersController@export');
+
+
+
+
+
+
+
+

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Exports\RoomExport;
+use Maatwebsite\Excel\Facades\Excel;
 use DB;
+use PDF;
 use App\Room;
 
 class RoomController extends Controller
@@ -44,4 +47,15 @@ class RoomController extends Controller
         return redirect('/room');
 
     }
+    public function export() 
+    {
+        return Excel::download(new RoomExport, 'data-room.xlsx');
+    }
+    public function exportPdf() 
+    {
+        $room = \App\Room::all();
+        $pdf = PDF::loadView('export.roompdf',['room' => $room]);
+        return $pdf->download('data-room.pdf');
+    }
+
 }
