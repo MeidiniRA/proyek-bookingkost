@@ -8,7 +8,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./">Booking <sup>Kost</sup></a>
                 <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
             </div>
 
@@ -16,7 +16,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a href="{{url('/room')}}"> <i class="menu-icon fa fa-tags"></i>Room </a>
-                        <a href="{{url('/custome')}}"> <i class="menu-icon fa fa-users"></i>Customer</a>
+                        <a href="{{url('/customer')}}"> <i class="menu-icon fa fa-users"></i>Customer</a>
                         <a href="{{url('/booking')}}"> <i class="menu-icon fa fa-bold"></i>Booking </a>
                     </li>
                 </div>
@@ -27,6 +27,7 @@
                         <a href="{{url('/admin')}}"> <i class="menu-icon fa fa-user"></i>Data Admin </a>
                     </li>
                 </ul>
+                
                 </div>
             </div><!-- /.navbar-collapse -->
         </nav>

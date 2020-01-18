@@ -1,0 +1,7 @@
+---Untuk Powerpoint---
+->Latar belakang 
+->Tujuan
+->ERD
+->Tampilan
+->Kesimpulan
+

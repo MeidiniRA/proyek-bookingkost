@@ -1,0 +1,44 @@
+-----untuk membuat migrasi baru atau table baru dalam database---- 
+mambuat fuction di appserviseprovider
+public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
+C:\xampp\htdocs\pegawai>php artisan make:migration create_pegawai_table
+Created Migration: 2019_12_23_044433_create_pegawai_table
+
+
+-------untuk membuat controller----
+C:\xampp\htdocs\pegawai>php artisan make:controller PegawaiController
+Controller created successfully.
+
+-------untuk membuat controller secara otomatis----
+C:\xampp\htdocs\pegawai>php artisan make:model Jabatan
+Model created successfully.
+
+C:\xampp\htdocs\pegawai>php artisan make:model Pegawai
+Model created successfully.
+
+C:\xampp\htdocs\pegawai>php artisan make:controller PegawaiController --resource
+Controller created successfully.
+
+C:\xampp\htdocs\pegawai>php artisan make:controller JabatanController --resource
+Controller created successfully.
+
+
+templete
+startbootstrap
+admintle
+creative-tim
+
+
+contoh join table laravel
+$ar_pegawai = DB::table('pegawai')
+            ->join('jabatan', 'jabatan.id', '=', 'pegawai.idjabatan')
+            ->select('pegawai.*', 'jabatan.nama AS posisi')
+            ->get();
+
+
+
+
+

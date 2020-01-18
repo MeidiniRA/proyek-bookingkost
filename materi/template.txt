@@ -1,0 +1,7 @@
+-------------------------------------------------
+|---- Langkah - langkah template web laravel ----|
+-------------------------------------------------
+
+download - template 
+membuat folder baru resource - views ex: layouts
+membuat file index.blade.php
