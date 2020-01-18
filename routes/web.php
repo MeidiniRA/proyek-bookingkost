@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('/layout/index');
 });
-
+Route::resource('about', 'AboutController');
+Route::resource('contact', 'ContactController');
 Route::resource('home', 'HomeController');
 Route::get('/login','AuthController@login')->name('login');
 Route::post('/postlogin','AuthController@postlogin');

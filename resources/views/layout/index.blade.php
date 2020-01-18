@@ -28,81 +28,16 @@
     
   </head>
   <body>
-  
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-    
-    
-    <div class="site-navbar-wrap js-site-navbar bg-white">
-      
-      <div class="container">
-        <div class="site-navbar bg-light">
-          <div class="py-1">
-            <div class="row align-items-center">
-              <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="index.html">Suites</a></h2>
-              </div>
-              <div class="col-10">
-                <nav class="site-navigation text-right" role="navigation">
-                  <div class="container">
-                    
-                    <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li>
-                        <a href="index.html">Home</a>
-                      </li>
-                      <li class="has-children">
-                        <a href="rooms.html">Rooms</a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="rooms.html">AC</a></li>
-                          <li><a href="rooms.html">Kipas Angin</a></li>
-                        </ul>
-                        </li>
-                        <li class="has-children">
-                        <a href="rooms.html">Kategori</a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="rooms.html">Perempuan</a></li>
-                          <li><a href="rooms.html">Laki-Laki</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                      <li class="has-children">
-                    
-                      @if (auth()->user())
-                          <li><a href="{{route('logout')}}">Logout</a></li>
-                          <li><a href="{{url('booking')}}">Pemesanan</a></li>
-                      @else
-                          <li><a href="{{url('login')}}">Login</a></li>
-                    @endif
-                    </ul>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    
-    <div class="slide-one-item home-slider owl-carousel">
+  @include('layout.header')
+  <div class="slide-one-item home-slider owl-carousel">
       
       <div class="site-blocks-cover overlay" style="background-image: url({{asset('front/images/hero_1.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
               
-              <h1 class="mb-2">Welcome To Suites</h1>
-              <h2 class="caption">Hotel &amp; Resort</h2>
+              <h1 class="mb-2">Welcome To Booking Kost</h1>
+              <!-- <h2 class="caption">Hotel &amp; Resort</h2> -->
             </div>
           </div>
         </div>
@@ -112,8 +47,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1 class="mb-2">Unique Experience</h1>
-              <h2 class="caption">Enjoy With Us</h2>
+              <h1 class="mb-2">Pemesanan Kost Lebih Mudah</h1>
+              <h2 class="caption">Bersama Kami</h2>
             </div>
           </div>
         </div>
@@ -123,15 +58,13 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1 class="mb-2">Relaxing Room</h1>
-              <h2 class="caption">Your Room, Your Stay</h2>
+              <h1 class="mb-2">Kamar Yang Nyaman</h1>
+              <h2 class="caption">Kamarmu, Tempat Tinggalmu</h2>
             </div>
           </div>
         </div>
       </div> 
-
     </div>
-
     <div class="site-section bg-light">
       <div class="container">
         <div class="row">
@@ -144,8 +77,8 @@
             <div class="hotel-room text-center">
               <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_1.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Standard Room</a></h3>
-                <strong class="price">$350.00 / per night</strong>
+                <h3 class="heading mb-0"><a href="#">Mawar</a></h3>
+                <strong class="price">Rp.1.000.000 / per month</strong>
               </div>
             </div>
           </div>
@@ -153,45 +86,45 @@
             <div class="hotel-room text-center">
               <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_2.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Family Room</a></h3>
-                <strong class="price">$400.00 / per night</strong>
+                <h3 class="heading mb-0"><a href="#">Melati</a></h3>
+                <strong class="price">Rp.500.000 / per month</strong>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-6 col-lg-4 mb-5">
+            <div class="hotel-room text-center">
+              <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_3.jpg')}}" alt="Image" class="img-fluid"></a>
+              <div class="hotel-room-body">
+                <h3 class="heading mb-0"><a href="#">Kamboja</a></h3>
+                <strong class="price">Rp.600.000 / per month</strong>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-5">
             <div class="hotel-room text-center">
-              <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_3.jpg')}}" alt="Image" class="img-fluid"></a>
+              <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_4.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Single Room</a></h3>
-                <strong class="price">$255.00 / per night</strong>
+                <h3 class="heading mb-0"><a href="#">Elang</a></h3>
+                <strong class="price">Rp.1.000.000 / per month</strong>
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 mb-5">
             <div class="hotel-room text-center">
-              <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_1.jpg')}}" alt="Image" class="img-fluid"></a>
+              <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_5.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Deluxe Room</a></h3>
-                <strong class="price">$150.00 / per night</strong>
+                <h3 class="heading mb-0"><a href="#">Gagak</a></h3>
+                <strong class="price">Rp.1.000.000 / per month</strong>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-5">
             <div class="hotel-room text-center">
-              <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_2.jpg')}}" alt="Image" class="img-fluid"></a>
+              <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_6.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Luxury Room</a></h3>
-                <strong class="price">$200.00 / per night</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_3.jpg')}}" alt="Image" class="img-fluid"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Single Room</a></h3>
-                <strong class="price">$155.00 / per night</strong>
+                <h3 class="heading mb-0"><a href="#">Merpati</a></h3>
+                <strong class="price">600.000 / per month</strong>
               </div>
             </div>
           </div>
@@ -224,72 +157,10 @@
               <h2 class="mb-5">About Us</h2>
             </div>
             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..</p>
-            <p><a href="https://vimeo.com/28959265" class="popup-vimeo text-uppercase">Watch Video <span class="icon-arrow-right small"></span></a></p>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
-            <h2 class="mb-5">Hotel Features</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="text-center p-4 item">
-              <span class="flaticon-pool display-3 mb-3 d-block text-primary"></span>
-              <h2 class="h5">Swimming Pool</h2>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="text-center p-4 item">
-              <span class="flaticon-desk display-3 mb-3 d-block text-primary"></span>
-              <h2 class="h5">Hotel Teller</h2>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="text-center p-4 item">
-              <span class="flaticon-exit display-3 mb-3 d-block text-primary"></span>
-              <h2 class="h5">Fire Exit</h2>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="text-center p-4 item">
-              <span class="flaticon-parking display-3 mb-3 d-block text-primary"></span>
-              <h2 class="h5">Car Parking</h2>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="text-center p-4 item">
-              <span class="flaticon-hair-dryer display-3 mb-3 d-block text-primary"></span>
-              <h2 class="h5">Hair Dryer</h2>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="text-center p-4 item">
-              <span class="flaticon-minibar display-3 mb-3 d-block text-primary"></span>
-              <h2 class="h5">Minibar</h2>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="text-center p-4 item">
-              <span class="flaticon-drink display-3 mb-3 d-block text-primary"></span>
-              <h2 class="h5">Drinks</h2>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="text-center p-4 item">
-              <span class="flaticon-cab display-3 mb-3 d-block text-primary"></span>
-              <h2 class="h5">Car Airport</h2>
-            </div>
-          </div>
-
-          
 
           
 
@@ -302,10 +173,10 @@
     <div class="py-5 upcoming-events" style="background-image: url({{asset('front/images/hero_1.jpg')}}); background-attachment: fixed;">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-6">
+         <!--  <div class="col-md-6">
             <h2 class="text-white">Summer Promo 50% Off</h2>
             <a href="#" class="text-white btn btn-outline-warning rounded-0 text-uppercase">Avail Now</a>
-          </div>
+          </div> -->
           <div class="col-md-6">
             <span class="caption">The Promo will start in</span>
             <div id="date-countdown"></div>    
@@ -337,9 +208,6 @@
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_4.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_4.jpg')}}" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-md-6 col-lg-3">
             <a href="images/img_5.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_5.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -348,130 +216,15 @@
           <div class="col-md-6 col-lg-3">
             <a href="images/img_7.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_7.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
-
+          <div class="col-md-6 col-lg-3">
+            <a href="images/img_8.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_8.jpg')}}" alt="Image" class="img-fluid"></a>
+          </div>
         </div>
       </div>
     </div>
     
 
 
-    <div class="site-section block-15">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
-            <h2>Upcoming Events</h2>
-          </div>
-        </div>
-
-
-        <div class="nonloop-block-15 owl-carousel">
-          
-
-            <div class="media-with-text p-md-5">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_1.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-          
-            <div class="media-with-text p-md-4">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_2.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-          
-            <div class="media-with-text p-md-4">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_3.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-
-            <div class="media-with-text p-md-4">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_1.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-          
-            <div class="media-with-text p-md-4">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_2.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-          
-            <div class="media-with-text p-md-4">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_3.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-            
-            <div class="media-with-text p-md-4">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_1.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-          
-            <div class="media-with-text p-md-4">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_2.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-          
-            <div class="media-with-text p-md-4">
-              <div class="img-border-sm mb-4">
-                <a href="#" class="popup-vimeo image-play">
-                  <img src="{{asset('front/images/img_3.jpg')}}" alt="" class="img-fluid">
-                </a>
-              </div>
-              <h2 class="heading mb-0"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-              <span class="mb-3 d-block post-date">Dec 20th, 2018 &bullet; By <a href="#">Admin</a></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
-            </div>
-          
-
-
-        </div>
-
-      </div>
-    </div>
 
 
     <div class="site-section block-14 bg-light">
@@ -480,7 +233,7 @@
         
         <div class="row">
           <div class="col-md-6 mx-auto text-center mb-5 section-heading">
-            <h2>What People Say</h2>
+            <h2>Owner</h2>
           </div>
         </div>
 
@@ -492,7 +245,7 @@
                 <img src="{{asset('front/images/person_1.jpg')}}" alt="Image" class="img-fluid rounded">
               </div>
               <div>
-                <h2 class="h5">Katie Johnson</h2>
+                <h2 class="h5">Meidini </h2>
                 <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;</blockquote>
               </div>
             </div>
@@ -503,12 +256,12 @@
                 <img src="{{asset('front/images/person_2.jpg')}}" alt="Image" class="img-fluid rounded">
               </div>
               <div>
-                <h2 class="h5">Jane Mars</h2>
+                <h2 class="h5">Diska</h2>
                 <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;</blockquote>
               </div>
             </div>
           </div>
-          <div class="p-4">
+          <!-- <div class="p-4">
             <div class="d-flex block-testimony">
               <div class="person mr-3">
                 <img src="{{asset('front/images/person_3.jpg')}}" alt="Image" class="img-fluid rounded">
@@ -529,7 +282,7 @@
                 <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;</blockquote>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -569,70 +322,9 @@
       </div>
     </div> -->
 
-    
-    <footer class="site-footer">
-      <div class="container">
-        
 
-        <div class="row">
-          <div class="col-md-4">
-            <h3 class="footer-heading mb-4 text-white">About</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
-            <p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Approach</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Careers</a></li>
-                  </ul>
-              </div>
-              <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Ministries</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Children</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Bible Study</a></li>
-                    <li><a href="#">Church</a></li>
-                    <li><a href="#">Missionaries</a></li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-md-2">
-            <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
-              <div class="col-md-12">
-                <p>
-                  <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                  <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                  <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                  <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
-
-                </p>
-              </div>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy; <script data-cfasync="false" src="{{asset('front//cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with Meidini & Diska
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-          
-        </div>
-      </div>
-    </footer>
   </div>
+  @include('layout.footer')
 
   <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{asset('front/js/jquery-migrate-3.0.1.min.js')}}"></script>
@@ -655,7 +347,6 @@
   <script>
       document.addEventListener('DOMContentLoaded', function() {
                 var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
-
                 for (var i = 0; i < total; i++) {
                     new MediaElementPlayer(mediaElements[i], {
                         pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
