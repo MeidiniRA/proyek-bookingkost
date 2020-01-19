@@ -77,7 +77,7 @@
             <div class="hotel-room text-center">
               <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_1.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Mawar</a></h3>
+                <h3 class="heading mb-0"><a href="{{asset('front/images/img_1.jpg')}}">Mawar</a></h3>
                 <strong class="price">Rp.1.000.000 / per month</strong>
               </div>
             </div>
@@ -86,7 +86,7 @@
             <div class="hotel-room text-center">
               <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_2.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Melati</a></h3>
+                <h3 class="heading mb-0"><a href="{{asset('front/images/img_2.jpg')}}">Melati</a></h3>
                 <strong class="price">Rp.500.000 / per month</strong>
               </div>
             </div>
@@ -95,7 +95,7 @@
             <div class="hotel-room text-center">
               <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_3.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Kamboja</a></h3>
+                <h3 class="heading mb-0"><a href="{{asset('front/images/img_3.jpg')}}">Kamboja</a></h3>
                 <strong class="price">Rp.600.000 / per month</strong>
               </div>
             </div>
@@ -104,7 +104,7 @@
             <div class="hotel-room text-center">
               <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_4.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Elang</a></h3>
+                <h3 class="heading mb-0"><a href="{{asset('front/images/img_4.jpg')}}">Elang</a></h3>
                 <strong class="price">Rp.1.000.000 / per month</strong>
               </div>
             </div>
@@ -114,7 +114,7 @@
             <div class="hotel-room text-center">
               <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_5.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Gagak</a></h3>
+                <h3 class="heading mb-0"><a href="{{asset('front/images/img_5.jpg')}}">Gagak</a></h3>
                 <strong class="price">Rp.1.000.000 / per month</strong>
               </div>
             </div>
@@ -123,7 +123,7 @@
             <div class="hotel-room text-center">
               <a href="#" class="d-block mb-0 thumbnail"><img src="{{asset('front/images/img_6.jpg')}}" alt="Image" class="img-fluid"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Merpati</a></h3>
+                <h3 class="heading mb-0"><a href="{{asset('front/images/img_6.jpg')}}">Merpati</a></h3>
                 <strong class="price">600.000 / per month</strong>
               </div>
             </div>
@@ -195,29 +195,29 @@
         </div>
         <div class="row no-gutters">
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_1.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_1.jpg')}}" alt="Image" class="img-fluid"></a>
+            <a href="{{asset('front/images/img_1.jpg')}}" class="image-popup img-opacity"><img src="{{asset('front/images/img_1.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_2.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_2.jpg')}}" alt="Image" class="img-fluid"></a>
+            <a href="{{asset('front/images/img_2.jpg')}}" class="image-popup img-opacity"><img src="{{asset('front/images/img_2.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_3.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_3.jpg')}}" alt="Image" class="img-fluid"></a>
+            <a href="{{asset('front/images/img_3.jpg')}}" class="image-popup img-opacity"><img src="{{asset('front/images/img_3.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_4.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_4.jpg')}}" alt="Image" class="img-fluid"></a>
+            <a href="{{asset('front/images/img_4.jpg')}}" class="image-popup img-opacity"><img src="{{asset('front/images/img_4.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_5.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_5.jpg')}}" alt="Image" class="img-fluid"></a>
+            <a href="{{asset('front/images/img_5.jpg')}}" class="image-popup img-opacity"><img src="{{asset('front/images/img_5.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_6.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_6.jpg')}}" alt="Image" class="img-fluid"></a>
+            <a href="{{asset('front/images/img_6.jpg')}}" class="image-popup img-opacity"><img src="{{asset('front/images/img_6.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_7.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_7.jpg')}}" alt="Image" class="img-fluid"></a>
+            <a href="{{asset('front/images/img_7.jpg')}}" class="image-popup img-opacity"><img src="{{asset('front/images/img_7.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-6 col-lg-3">
-            <a href="images/img_8.jpg" class="image-popup img-opacity"><img src="{{asset('front/images/img_8.jpg')}}" alt="Image" class="img-fluid"></a>
+            <a href="{{asset('front/images/img_8.jpg')}}" class="image-popup img-opacity"><img src="{{asset('front/images/img_8.jpg')}}" alt="Image" class="img-fluid"></a>
           </div>
         </div>
       </div>
